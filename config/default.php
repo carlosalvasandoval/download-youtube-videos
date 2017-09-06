@@ -16,7 +16,7 @@ return [
      * true   => debug mode on
      * false  => debug mode off
      */
-    'debug' => false,
+    'debug' => true,
 
     /**
      * Enable the YouTube signature decipher function
@@ -58,7 +58,7 @@ return [
      * install: https://github.com/aria2/aria2/releases
      *
      */
-    'MP3Enable' => false, // enable or disable media conversion and download to mp3
+    'MP3Enable' => true, // enable or disable media conversion and download to mp3
     'MP3ConvertVideo' => false, // 'false' download adaptive audio only to save bandwidth.
     // 'true' failover to video download if adaptive audio format not available
     'MP3Quality' => '128k', // 'number(k)' (64k, 80k, 96k, 112k, 128k, 160k, 192k) or 'high': bitrate quality of converted mp3

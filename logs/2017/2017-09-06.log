@@ -1,0 +1,34 @@
+[2017-09-06T22:52:47+00:00] debug: App started
+[2017-09-06T22:52:47+00:00] debug: YoutubeDownloader\Application\ResultController created
+[2017-09-06T22:52:56+00:00] debug: App started
+[2017-09-06T22:52:56+00:00] debug: YoutubeDownloader\Application\ResultController created
+[2017-09-06T22:54:12+00:00] debug: App started
+[2017-09-06T22:54:12+00:00] debug: YoutubeDownloader\Application\MainController created
+[2017-09-06T22:54:12+00:00] debug: Controller executed. App closed.
+[2017-09-06T23:00:50+00:00] debug: App started
+[2017-09-06T23:00:50+00:00] debug: YoutubeDownloader\Application\MainController created
+[2017-09-06T23:00:50+00:00] debug: Controller executed. App closed.
+[2017-09-06T23:09:55+00:00] debug: App started
+[2017-09-06T23:09:55+00:00] debug: YoutubeDownloader\Application\MainController created
+[2017-09-06T23:09:55+00:00] debug: Controller executed. App closed.
+[2017-09-06T23:11:06+00:00] debug: App started
+[2017-09-06T23:11:06+00:00] debug: YoutubeDownloader\Application\MainController created
+[2017-09-06T23:11:06+00:00] debug: Controller executed. App closed.
+[2017-09-06T23:13:29+00:00] debug: App started
+[2017-09-06T23:13:29+00:00] debug: YoutubeDownloader\Application\MainController created
+[2017-09-06T23:13:29+00:00] debug: Controller executed. App closed.
+[2017-09-06T23:14:16+00:00] debug: App started
+[2017-09-06T23:14:16+00:00] debug: YoutubeDownloader\Application\MainController created
+[2017-09-06T23:14:16+00:00] debug: Controller executed. App closed.
+[2017-09-06T23:14:23+00:00] debug: App started
+[2017-09-06T23:14:23+00:00] debug: YoutubeDownloader\Application\MainController created
+[2017-09-06T23:14:23+00:00] debug: Controller executed. App closed.
+[2017-09-06T23:15:43+00:00] debug: App started
+[2017-09-06T23:15:43+00:00] debug: YoutubeDownloader\Application\MainController created
+[2017-09-06T23:15:43+00:00] debug: Controller executed. App closed.
+[2017-09-06T23:18:26+00:00] debug: App started
+[2017-09-06T23:18:26+00:00] debug: YoutubeDownloader\Application\MainController created
+[2017-09-06T23:18:26+00:00] debug: Controller executed. App closed.
+[2017-09-06T23:18:43+00:00] debug: App started
+[2017-09-06T23:18:43+00:00] debug: YoutubeDownloader\Application\MainController created
+[2017-09-06T23:18:43+00:00] debug: Controller executed. App closed.
