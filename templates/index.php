@@ -1,7 +1,7 @@
 <?php echo $this->inc('header.php', ['title' => 'Youtube Downloader']); ?>
 	<div class="well">
 		<form class="" method="get" id="download" action="getvideo.php">
-			<h1 class="form-download-heading">Youtube Downloader</h1>
+			<h1 class="form-download-heading">Descargar videos youtube</h1>
 				<div class="input-group">
 				  <input type="text" name="videoid" id="videoid" class="form-control input-lg" placeholder="YouTube Link or VideoID">
 				  <span class="input-group-btn">
@@ -26,7 +26,6 @@
 		}
 		?>
 		<hr />
-		<p class="muted pull-right"><a href="https://github.com/jeckman/YouTube-Downloader" target="_blank">Youtube Downloader <?php echo $this->get('app_version', ''); ?></a> is licensed under GPL 2.</p>
 		<div class="clearfix"></div>
 		</form>
 	</div>

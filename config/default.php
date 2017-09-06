@@ -73,7 +73,7 @@ return [
      *
      * true or false
      */
-    'showBrowserExtensions' => true,
+    'showBrowserExtensions' => false,
 
     /**
      * Multiple IPs
