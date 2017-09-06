@@ -16,7 +16,7 @@ return [
      * true   => debug mode on
      * false  => debug mode off
      */
-    'debug' => true,
+    'debug' => false,
 
     /**
      * Enable the YouTube signature decipher function
