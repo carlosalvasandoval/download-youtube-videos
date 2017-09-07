@@ -54,7 +54,7 @@
                 </ol>
               </div>
               <div class="input-group">
-                <input type="text" name="videoid" id="videoid" class="form-control" placeholder="Pega el enlace de youtube : https://www.youtube.com/watch?v=...">
+                <input type="text" name="videoid" id="videoid" class="form-control" placeholder="Pegar enlace youtube: https://www.youtube.com/watch?v=...">
                 <span class="input-group-btn">
                   <input class="btn btn-danger" type="submit" name="type" id="type" value="Descargar" />
                 </span>
