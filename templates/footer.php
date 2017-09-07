@@ -10,7 +10,7 @@
     ],
     twitter_counter: true,
     text: "Compartir con: ",
-    url: "http://descargarvideoyoutube.com"
+    url: "http://descargarvideoyoutube.com",
     title:"Hey! mira esta herramienta para descargar videos de youtube GRATIS!! "
   });
 </script>
