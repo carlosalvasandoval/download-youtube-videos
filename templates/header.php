@@ -12,7 +12,7 @@
     <meta property="og:title"              content="DescargarVideoYotube.com | Herramienta gratuita para descargar videos de youtube tan solo en 3 simples pasos" />
     <meta property="og:description"        content="Herramienta gratuita para descargar videos de Youtube" />
     <meta property="og:image"              content="http://www.descargarvideoyoutube.com/img/descargarvideoyoutube_facebook_img.png" />
-    
+    <meta property="fb:app_id"             content="270535033464194" />
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link href="vendor/jquery-floating-social-share-master/dist/jquery.floating-social-share.min.css" rel="stylesheet" type="text/css"/>
