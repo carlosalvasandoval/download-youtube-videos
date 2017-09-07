@@ -26,7 +26,7 @@ return [
      * false => decipher is disabled
      * true => decipher is enabled
      */
-    'enable_youtube_decipher_signature' => false,
+    'enable_youtube_decipher_signature' => true,
 
     /**
      * Thumbnail Image Configuration
@@ -59,15 +59,16 @@ return [
      *
      */
     'MP3Enable' => true, // enable or disable media conversion and download to mp3
-    'MP3ConvertVideo' => false, // 'false' download adaptive audio only to save bandwidth.
+    'MP3ConvertVideo' => true, // 'false' download adaptive audio only to save bandwidth.
     // 'true' failover to video download if adaptive audio format not available
     'MP3Quality' => '128k', // 'number(k)' (64k, 80k, 96k, 112k, 128k, 160k, 192k) or 'high': bitrate quality of converted mp3
     // set to 'high' to get and set highest quality
     // info: highest Youtube audio bitrate is 160k, higher than that is maybe useless
     'MP3TempDir' => 'mp3temp', // temporary download location for media
-    'ffmpegPath' => 'C:\Program Files (x86)\ffmpeg\ffmpeg.exe', // ffmpeg location path
-    'aria2Path' => 'C:\cygwin\bin\aria2c.exe', // aria2 location path,
-
+    //'ffmpegPath' => 'C:\Program Files (x86)\ffmpeg\ffmpeg.exe', // ffmpeg location path
+    'ffmpegPath' => 'ffplay', // ffmpeg location path /usr/bin/ffmpeg
+    //'aria2Path' => 'C:\cygwin\bin\aria2c.exe', // aria2 location path,
+    'aria2Path' => 'aria2c', // aria2 location path,
     /**
      * show links for install browser extensions?
      *
@@ -153,5 +154,5 @@ return [
      *
      * more examples: http://php.net/manual/en/timezones.php
      */
-    'default_timezone' => 'UTC',
+    'default_timezone' => 'America/Lima',
 ];

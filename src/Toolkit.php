@@ -3,7 +3,7 @@
 namespace YoutubeDownloader;
 
 use Exception;
-
+use YoutubeDownloader\Provider\Youtube\VideoInfo;
 /**
  * Toolkit
  *
@@ -292,13 +292,16 @@ class Toolkit
 
 		$formats = $video_info->getFormats();
 		// find audio with highest quality
-		foreach($formats as $format)
-		{
-			if(strpos($format['type'], 'audio') !== false && intval($format['quality']) > intval($audio_quality))
+//        echo '<pre>';
+//		var_dump($formats);
+//        die();
+        foreach($formats as $format)
+		{ 
+			if(strpos($format->getType(), 'audio') !== false && intval($format->getQuality()) > intval($audio_quality))
 			{
-				$audio_quality = $format['quality'];
-				$media_url = $format['url'];
-				$media_type = str_replace("audio/", "", $format['type']);
+				$audio_quality = $format->getQuality();
+				$media_url = $format->getUrl();
+				$media_type = str_replace("audio/", "", $format->getType());
 			}
 		}
 
@@ -319,8 +322,8 @@ class Toolkit
 				throw new Exception('MP3 downlod failed, no stream was found.');
 			}
 
-			$media_url = $formats[0]['url'];
-			$media_type = str_replace("audio/", "", $formats[0]['type']);
+			$media_url = $formats[0]->getUrl();
+			$media_type = str_replace("audio/", "", $formats[0]->getType());
 		}
 
 		$mp3dir = realpath($config->get('MP3TempDir'));
