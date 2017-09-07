@@ -129,10 +129,15 @@
 <?php echo $this->inc('footer.php'); ?>
 <script>
   $(document).ready(function () {
-    $('fsize').each(function (k, v) {
-      if ($(v).text()) {
-        location.reload();
-      }
-    });
+    setTimeout(function () {
+      $('fsize').each(function (k, v) {
+        console.log($(v).text());
+        if (!$(v).text() || $(v).text()=='0B') {
+          location.reload();
+          return false;
+        }
+      });
+    }, 1000);
+
   });
 </script>
