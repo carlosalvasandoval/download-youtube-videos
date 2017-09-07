@@ -37,10 +37,8 @@
 
           <div class="row">
             <div class="col-md-8">
-              <div class="text-center">
-                <img src="img/descargarvideoyoutube_youtube_logo.png" alt="Descargar videos de youtube" class="img-responsive"/>
-              </div>
-              <h1 class="form-download-heading">Descargar videos de Youtube</h1>
+              <h1 class="form-download-heading">
+                <img src="img/descargarvideoyoutube_youtube_logo.png" alt="Descargar videos de youtube" class="img-responsive" style="display: inline"/> Descargar videos de Youtube</h1>
 
               <p class="help-block">
                 Está herramienta te permite descargar videos de youtube convirtiéndolos a múltiples formatos:
@@ -48,7 +46,7 @@
               </p>
 
               <div class="video-info">
-                <h2>Pasos para descargar videos o audios de youtube:</h2>
+                <h3>Pasos para descargar videos o audios de youtube:</h3>
                 <ol class="h5">
                   <li>Copiar URL desde youtube del video que deseas descargarte</li>
                   <li>Pegar el enlace en la casilla de descarga y presionar botón "descargar"</li>
