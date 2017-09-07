@@ -72,7 +72,7 @@
       <?php } ?>
     </ul>
     <hr />
-    <h2>Video y audio por separado</h2>
+<!--    <h2>Video y audio por separado</h2>
     <ul class="dl-list">
       <?php
       foreach ($this->get('formats', []) as $format)
@@ -102,7 +102,7 @@
           <div class="label label-warning">quality: <?php echo $format['quality']; ?></div>
         </li>
       <?php } ?>
-    </ul>
+    </ul>-->
     <?php
     if ($this->get('showMP3Download', false) === true)
     {
