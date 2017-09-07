@@ -329,8 +329,10 @@ class Toolkit
 		$mp3dir = realpath($config->get('MP3TempDir'));
 		$mediaName = $_GET['title'] . '.' . $media_type;
 		// -x4: set 4 connection for each download
-		$cmd = '"' . $config->get('aria2Path') . '"' . " -x4 -k1M --continue=true --dir=\"$mp3dir\" --out=$mediaName \"$media_url\" 2>&1" ;
-		exec($cmd, $output);
+		//$cmd = '"' . $config->get('aria2Path') . '"' . " -x4 -k1M --continue=true --dir=\"$mp3dir\" --out=$mediaName \"$media_url\" 2>&1" ;
+        $cmd = $config->get('aria2Path') . " -x4 -k1M --continue=true --dir=\"$mp3dir\" --out=$mediaName \"$media_url\" 2>&1" ;
+		//die();
+        exec($cmd, $output);
 
 		if(strpos(implode(" ", $output), "download completed") === false)
 		{
