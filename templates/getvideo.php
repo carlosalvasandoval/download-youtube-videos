@@ -1,108 +1,143 @@
 <?php echo $this->inc('header.php', ['title' => 'Youtube Downloader Results']); ?>
-<div class="well">
-  <h1 class="download-heading">Resultados de busquedas</h1>
+<div class="well row">
+  <h1 class="download-heading">Descarga tu video!!</h1>
   <hr />
-  <div id="info">
+  <div class="col-sm-7 col-xs-12">
+    <div id="info">
+      <?php
+      if ($this->get('show_thumbnail') === true)
+      {
+        ?>
+        <a href="<?php echo $this->get('thumbnail_anchor'); ?>" target="_blank"><img src="<?php echo $this->get('thumbnail_src'); ?>" border="0" hspace="2" vspace="2"></a>
+      <?php } ?>
+      <p><?php echo $this->get('video_title'); ?></p>
+    </div>
     <?php
-    if ($this->get('show_thumbnail') === true)
+    if ($this->get('no_stream_map_found', false) === true)
     {
       ?>
-      <a href="<?php echo $this->get('thumbnail_anchor'); ?>" target="_blank"><img src="<?php echo $this->get('thumbnail_src'); ?>" border="0" hspace="2" vspace="2"></a>
-    <?php } ?>
-    <p><?php echo $this->get('video_title'); ?></p>
-  </div>
-  <?php
-  if ($this->get('no_stream_map_found', false) === true)
-  {
-    ?>
-    <p>No encoded format stream found.</p>
-    <p>Here is what we got from YouTube:</p>
-    <pre>
-      <?php echo $this->get('no_stream_map_found_dump'); ?>
-    </pre>
-    <?php
-  }
-  else
-  {
-    ?>
-    <?php
-    if ($this->get('show_debug1', false) === true)
-    {
-      ?>
+      <p>No encoded format stream found.</p>
+      <p>Here is what we got from YouTube:</p>
       <pre>
-        <?php echo $this->get('debug1'); ?>
+        <?php echo $this->get('no_stream_map_found_dump'); ?>
       </pre>
-    <?php } ?>
-    <?php
-    if ($this->get('show_debug2', false) === true)
+      <?php
+    }
+    else
     {
       ?>
-      <p>These links will expire at <?php echo $this->get('debug2_expires'); ?></p>
-      <p>The server was at IP address <?php echo $this->get('debug2_ip'); ?> which is an <?php echo $this->get('debug2ipbits'); ?> bit IP address. Note that when 8 bit IP addresses are used, the download links may fail.</p>
-    <?php } ?>
-    <h2>Lista de formatos para descargar</h2>
-    <ul class="dl-list">
       <?php
-      foreach ($this->get('streams', []) as $format)
+      if ($this->get('show_debug1', false) === true)
       {
         ?>
-        <li>
-          <?php
-          if ($format['show_direct_url'] === true)
-          {
-            ?>
-            <span class="label label-info h5"><?php echo $format['type']; ?></span>
-            <?php
-          }
-          else
-          {
-            ?>
-            <span class="mime"><?php echo $format['type']; ?></span>
-          <?php } ?>
-
-          <?php
-          if ($format['show_proxy_url'] === true)
-          {
-            ?>
-            <a class="btn btn-primary btn-download" href="<?php echo $format['proxy_url']; ?>" class="mime">
-              <i class="glyphicon glyphicon-download-alt"></i> Descargar - <fsize><?php echo $format['size']; ?></fsize></a>
-          <?php } ?>
-          <div class="label label-warning">quality: <?php echo $format['quality']; ?></div>
-        </li>
+        <pre>
+          <?php echo $this->get('debug1'); ?>
+        </pre>
       <?php } ?>
-    </ul>
+      <?php
+      if ($this->get('show_debug2', false) === true)
+      {
+        ?>
+        <p>These links will expire at <?php echo $this->get('debug2_expires'); ?></p>
+        <p>The server was at IP address <?php echo $this->get('debug2_ip'); ?> which is an <?php echo $this->get('debug2ipbits'); ?> bit IP address. Note that when 8 bit IP addresses are used, the download links may fail.</p>
+      <?php } ?>
+      <h2>Lista de formatos para descargar</h2>
+
+      <div class="visible-xs-block">
+        <script type="text/javascript">
+          (function () {
+            if (window.CHITIKA === undefined) {
+              window.CHITIKA = {'units': []};
+            }
+            ;
+            var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 320, "height": 50, "sid": "Chitika Default"};
+            var placement_id = window.CHITIKA.units.length;
+            window.CHITIKA.units.push(unit);
+            document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+          }());
+        </script>
+        <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+      </div>
+
+      <ul class="dl-list">
+        <?php
+        foreach ($this->get('streams', []) as $format)
+        {
+          ?>
+          <li>
+            <?php
+            if ($format['show_direct_url'] === true)
+            {
+              ?>
+              <span class="label label-info h5"><?php echo $format['type']; ?></span>
+              <?php
+            }
+            else
+            {
+              ?>
+              <span class="mime"><?php echo $format['type']; ?></span>
+            <?php } ?>
+
+            <?php
+            if ($format['show_proxy_url'] === true)
+            {
+              ?>
+              <a class="btn btn-primary btn-download" href="<?php echo $format['proxy_url']; ?>" class="mime">
+                <i class="glyphicon glyphicon-download-alt"></i> Descargar - <fsize><?php echo $format['size']; ?></fsize></a>
+            <?php } ?>
+            <div class="label label-warning">quality: <?php echo $format['quality']; ?></div>
+          </li>
+        <?php } ?>
+      </ul>
+      <div class="hidden-xs">
+        <script type="text/javascript">
+          (function () {
+            if (window.CHITIKA === undefined) {
+              window.CHITIKA = {'units': []};
+            }
+            ;
+            var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 728, "height": 90, "sid": "Chitika Default"};
+            var placement_id = window.CHITIKA.units.length;
+            window.CHITIKA.units.push(unit);
+            document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+          }());
+        </script>
+        <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+      </div>
+
+
     <hr />
-<!--    <h2>Video y audio por separado</h2>
-    <ul class="dl-list">
+    <!--    <h2>Video y audio por separado</h2>
+        <ul class="dl-list">
+    <?php
+    foreach ($this->get('formats', []) as $format)
+    {
+      ?>
+                              <li>
       <?php
-      foreach ($this->get('formats', []) as $format)
+      if ($format['show_direct_url'] === true)
       {
         ?>
-        <li>
-          <?php
-          if ($format['show_direct_url'] === true)
-          {
-            ?>
-            <span class="label label-info h5"><?php echo $format['type']; ?></span>
-            <?php
-          }
-          else
-          {
-            ?>
-            <span class="mime"><?php echo $format['type']; ?></span>
-          <?php } ?>
-
-          <?php
-          if ($format['show_proxy_url'] === true)
-          {
-            ?>
-            <a class="btn btn-primary btn-download" href="<?php echo $format['proxy_url']; ?>" class="mime">
-              <i class="glyphicon glyphicon-download-alt"></i> Descargar - <fsize><?php echo $format['size']; ?></fsize></a>
-          <?php } ?>
-          <div class="label label-warning">quality: <?php echo $format['quality']; ?></div>
-        </li>
+                                                    <span class="label label-info h5"><?php echo $format['type']; ?></span>
+        <?php
+      }
+      else
+      {
+        ?>
+                                                    <span class="mime"><?php echo $format['type']; ?></span>
       <?php } ?>
-    </ul>-->
+                      
+      <?php
+      if ($format['show_proxy_url'] === true)
+      {
+        ?>
+                                                    <a class="btn btn-primary btn-download" href="<?php echo $format['proxy_url']; ?>" class="mime">
+                                                      <i class="glyphicon glyphicon-download-alt"></i> Descargar - <fsize><?php echo $format['size']; ?></fsize></a>
+      <?php } ?>
+                                <div class="label label-warning">quality: <?php echo $format['quality']; ?></div>
+                              </li>
+    <?php } ?>
+        </ul>-->
     <?php
     if ($this->get('showMP3Download', false) === true)
     {
@@ -123,21 +158,40 @@
       <p><a href="ytdl.user.js" class="userscript btn btn-mini" title="Install chrome extension to view a 'Download' link to this application on Youtube video pages."> Install Chrome Extension </a></p>
     <?php } ?>
   <?php } ?>
-  <hr />
-  <div class="clearfix"></div>
+</div>
+<div class="col-sm-5 col-xs-12">
+  <div class="hidden-xs">
+    <script type="text/javascript">
+        (function () {
+          if (window.CHITIKA === undefined) {
+            window.CHITIKA = {'units': []};
+          }
+          ;
+          var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 300, "height": 250, "sid": "Chitika Default"};
+          var placement_id = window.CHITIKA.units.length;
+          window.CHITIKA.units.push(unit);
+          document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+        }());
+    </script>
+    <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+  </div>
+
+</div>
+<hr />
+<div class="clearfix"></div>
 </div>
 <?php echo $this->inc('footer.php'); ?>
 <script>
-  $(document).ready(function () {
-    setTimeout(function () {
-      $('fsize').each(function (k, v) {
-        console.log($(v).text());
-        if (!$(v).text() || $(v).text()=='0B') {
-          location.reload();
-          return false;
-        }
-      });
-    }, 1000);
+        $(document).ready(function () {
+          setTimeout(function () {
+            $('fsize').each(function (k, v) {
+              console.log($(v).text());
+              if (!$(v).text() || $(v).text() == '0B') {
+                location.reload();
+                return false;
+              }
+            });
+          }, 1000);
 
-  });
+        });
 </script>
