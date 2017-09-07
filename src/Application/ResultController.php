@@ -72,7 +72,7 @@ class ResultController extends ControllerAbstract
 			$this->responseWithErrorMessage($message);
 		}
 
-		if ( $my_type !== 'Download' )
+		if ( $my_type !== 'Descargar' )
 		{
 			/* In this else, the request didn't come from a form but from something else
 			 * like an RSS feed.
