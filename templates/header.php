@@ -9,9 +9,9 @@
     
     <meta property="og:url"                content="http://descargarvideoyoutube.com" />
     <meta property="og:type"               content="website" />
-    <meta property="og:title"              content="Descargar videos de Yotube" />
+    <meta property="og:title"              content="DescargarVideoYotube.com | Herramienta gratuita para descargar videos de youtube tan solo en 3 simples pasos" />
     <meta property="og:description"        content="Herramienta gratuita para descargar videos de Youtube" />
-    <meta property="og:image"              content="http://descargarvideoyoutube.com/img/descargarvideoyoutube_youtube_logo.png" />
+    <meta property="og:image"              content="http://www.descargarvideoyoutube.com/img/descargarvideoyoutube_facebook_img.png" />
     
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
