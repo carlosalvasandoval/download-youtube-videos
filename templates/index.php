@@ -48,7 +48,7 @@
               <div class="video-info">
                 <h4>Pasos para descargar videos de youtube:</h4>
                 <ol class="h5">
-                  <li>Copiar URL del video desde <span class="label label-default">youtube.com</span></li>
+                  <li>Copiar URL del video desde <a href="https://www.youtube.com/" target="_blank">youtube.com</a></li>
                   <li>Pegar el enlace en la casilla de descarga y presionar botón "descargar"</li>
                   <li>Finalmente elige el formato que desees y aprieta el botón descargar</li>
                 </ol>
