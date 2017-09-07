@@ -61,7 +61,7 @@ return [
     'MP3Enable' => true, // enable or disable media conversion and download to mp3
     'MP3ConvertVideo' => true, // 'false' download adaptive audio only to save bandwidth.
     // 'true' failover to video download if adaptive audio format not available
-    'MP3Quality' => '128k', // 'number(k)' (64k, 80k, 96k, 112k, 128k, 160k, 192k) or 'high': bitrate quality of converted mp3
+    'MP3Quality' => '80k', // 'number(k)' (64k, 80k, 96k, 112k, 128k, 160k, 192k) or 'high': bitrate quality of converted mp3
     // set to 'high' to get and set highest quality
     // info: highest Youtube audio bitrate is 160k, higher than that is maybe useless
     'MP3TempDir' => 'mp3temp', // temporary download location for media
