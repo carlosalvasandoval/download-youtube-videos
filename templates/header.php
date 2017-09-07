@@ -6,10 +6,18 @@
     <meta name="keywords" content="Descargar videos de youtube, youtube video, descargar youtube 3GP, descargar youtube, convertidor mp3,mp3 youtube ,youtube musica, convertidor youtube, youtube a mp3, youtube a mp4, convertir youtube, descargar youtube a FLV"/>
     <meta name="description" content="Descargar videos de youtube en 3 simples pasos solo copia y pega!!"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    
+    <meta property="og:url"                content="http://descargarvideoyoutube.com" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Descargar videos de Yotube" />
+    <meta property="og:description"        content="Herramienta gratuita para descargar videos de Youtube" />
+    <meta property="og:image"              content="http://descargarvideoyoutube.com/img/descargarvideoyoutube_youtube_logo.png" />
+    
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link href="vendor/jquery-floating-social-share-master/dist/jquery.floating-social-share.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/custom.css" rel="stylesheet"/>
+
     <style type="text/css">
       #info {
         padding: 0 0 0 130px;
