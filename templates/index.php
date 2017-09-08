@@ -98,7 +98,7 @@ src="https://www.youtube.com/embed/' . $searchResult['id']['videoId'] . '">
 </div>';
 
             $htmlBody .= <<<END
-    <h3>Videos</h3>
+    <h3><a name="videos_anchor" href="#videos">Videos</a></h3>
     $videos
 END;
           }
@@ -213,4 +213,8 @@ END;
               '</div>');
             window.location.href = "getvideo.php?videoid=https://www.youtube.com/watch?v=" + video_id + '&type=Descargar';
           });
+<?php if ($_GET['q']): ?>
+            var aTag = $("a[name='videos_anchor']");
+            $('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
+<?php endif; ?>
 </script>
