@@ -24,7 +24,7 @@ return [
    * false => decipher is disabled
    * true => decipher is enabled
    */
-  'enable_youtube_decipher_signature' => false,
+  'enable_youtube_decipher_signature' => true,
   /**
    * Thumbnail Image Configuration
    *
