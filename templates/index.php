@@ -36,13 +36,12 @@
         <div class="text-center">
           <h1 class="form-download-heading">
             <img src="img/descargarvideoyoutube_youtube_logo.png" alt="Descargar videos de youtube" class="img-responsive" style="display: inline"/> Descargar videos de Youtube</h1>
-          <h2 class="help-block h4">
+            <h2 class="help-block h4" style="line-height: 25px;">
             Está herramienta te permite descargar videos de youtube convirtiéndolos a múltiples formatos:
             <br> <span class="label label-default">youtube a mp4</span> ,<span class="label label-default">youtube a mp3</span>, <span class="label label-default">youtube a 3gpp</span> entre otros.
           </h2>
           <p> 
-            El uso de esta herramienta es totalmente <b>GRATIS</b> creada para descargar videos de youtube <b>GRATIS</b>.
-
+            El uso de esta herramienta es totalmente <b>GRATIS</b> creada para descargar videos de youtube <b>GRATIS</b>. <span class="label label-primary">Si te gusto compártela!!</span>
           </p>
         </div>
         <?php
@@ -115,19 +114,19 @@ END;
         <div class="panel panel-default" style="border: 3px dashed red">
           <div class="panel-body">
             <div class="video-info">
-              <h4>Pasos para descargar videos de youtube:</h4>
+              <h2 class="h3">Pasos para descargar videos de youtube:</h2>
               <ol class="h5">
-                <li>Ingresar el nombre del video que deseas descargar en la casilla de búsqueda.</li>
+                <li>Ingresa el <b>título del video</b> o ingresa la <b>URL</b> de algun video de Youtube en la casilla de busqueda.</li>
                 <li>Clic en el botón "descargar" que se ubica debajo del video.</li>
                 <li>Finalmente elige el formato que desees y aprieta el botón "descargar"</li>
               </ol>
             </div>
             <form method="GET">
-              <div class="input-group input-lg" style="margin-bottom:10px">
-                <input type="search" class="form-control input-lg" id="q" name="q" placeholder="Buscar video en Youtube.com para descargar">
+              <div class="input-group" style="margin-bottom:10px">
+                <input type="search" class="form-control" id="q" name="q" placeholder="Buscar por URL o título de video en Youtube.com">
                 <span class="input-group-btn">
-                  <button class="btn btn-danger btn-lg" type="submit">
-                    <i class="glyphicon glyphicon-search"></i> Buscar</button>
+                  <button class="btn btn-danger" type="submit">
+                    <i class="glyphicon glyphicon-search"></i></button>
                 </span>
               </div>
             </form>
@@ -215,6 +214,6 @@ END;
           });
 <?php if ($_GET['q']): ?>
             var aTag = $("a[name='videos_anchor']");
-            $('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
+            $('html,body').animate({scrollTop: aTag.offset().top + 20}, 'slow');
 <?php endif; ?>
 </script>
