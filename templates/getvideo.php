@@ -1,6 +1,8 @@
 <?php echo $this->inc('header.php', ['title' => 'Youtube Downloader Results']); ?>
 <div class="well row">
-  <h1 class="download-heading">Descarga tu video!!</h1>
+  <h1 class="download-heading">Todo listo para que descargues tu video!!</h1>
+  <h2> No te olvides de compartir esta aplicación entre tus amigos </h2>
+  <img src="img/descargarvideoyoutube_like.png" alt="compartir con amigos"/>
   <hr />
   <div class="col-sm-7 col-xs-12">
     <div id="info">

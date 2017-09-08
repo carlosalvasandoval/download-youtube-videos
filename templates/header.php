@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8"/>
     <title><?php echo $this->get('title', 'Descargar videos de Youtube'); ?></title>
-    <meta name="keywords" content="Descargar videos de youtube, youtube video, descargar youtube 3GP, descargar youtube, convertidor mp3,mp3 youtube ,youtube musica, convertidor youtube, youtube a mp3, youtube a mp4, convertir youtube, descargar youtube a FLV"/>
-    <meta name="description" content="Descargar videos de youtube en 3 simples pasos solo copia y pega!!"/>
+    <meta name="keywords" content="Descargar videos de youtube,descargar videos gratis, youtube video, descargar youtube 3GP, descargar youtube, convertidor mp3,mp3 youtube ,youtube musica, convertidor youtube, youtube a mp3, youtube a mp4, convertir youtube, descargar youtube a FLV"/>
+    <meta name="description" content="Descargar videos gratis de youtube en 3 simples pasos solo copia y pega!!"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    
+
     <meta property="og:url"                content="http://descargarvideoyoutube.com" />
     <meta property="og:type"               content="website" />
     <meta property="og:title"              content="DescargarVideoYotube.com | Herramienta gratuita para descargar videos de youtube tan solo en 3 simples pasos" />
@@ -30,6 +30,17 @@
         top: 0;
         width: 120px;
         height: 90px
+      }
+      .videos_resultados.row {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display:         flex;
+        flex-wrap: wrap;
+      }
+      .videos_resultados.row > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
       }
     </style>
     <script>
