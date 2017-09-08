@@ -53,8 +53,8 @@
         if ($_GET['q'])
         {
           // Call set_include_path() as needed to point to your client library.
-          require_once '/vendor/vendor/google/apiclient/src/Google/Client.php';
-          require_once '/vendor/vendor/google/apiclient-services/src/Google/Service/YouTube.php';
+          require_once 'vendor/vendor/google/apiclient/src/Google/Client.php';
+          require_once 'vendor/vendor/google/apiclient-services/src/Google/Service/YouTube.php';
           $DEVELOPER_KEY = 'AIzaSyC6xycSbQnk91ESo4bPteKdO76j_q8MPrw';
           $client = new Google_Client();
           $client->setDeveloperKey($DEVELOPER_KEY);
