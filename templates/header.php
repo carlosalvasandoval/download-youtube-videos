@@ -6,7 +6,6 @@
     <meta name="keywords" content="Descargar videos de youtube,descargar videos gratis, youtube video, descargar youtube 3GP, descargar youtube, convertidor mp3,mp3 youtube ,youtube musica, convertidor youtube, youtube a mp3, youtube a mp4, convertir youtube, descargar youtube a FLV"/>
     <meta name="description" content="Descargar videos gratis de youtube en 3 simples pasos!!"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <meta name="propeller" content="29edbb81dcadc7e1c226148dbd282278" />
     <meta property="og:url"                content="http://descargarvideoyoutube.com" />
     <meta property="og:type"               content="website" />
     <meta property="og:title"              content="DescargarVideoYotube.com | Herramienta gratuita para descargar videos de youtube tan solo en 3 simples pasos" />
