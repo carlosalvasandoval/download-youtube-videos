@@ -36,7 +36,7 @@
         <div class="text-center">
           <h1 class="form-download-heading">
             <img src="img/descargarvideoyoutube_youtube_logo.png" alt="Descargar videos de youtube" class="img-responsive" style="display: inline"/> Descargar videos de Youtube</h1>
-            <h2 class="help-block h4" style="line-height: 25px;">
+          <h2 class="help-block h4" style="line-height: 25px;">
             Está herramienta te permite descargar videos de youtube convirtiéndolos a múltiples formatos:
             <br> <span class="label label-default">youtube a mp4</span> ,<span class="label label-default">youtube a mp3</span>, <span class="label label-default">youtube a 3gpp</span> entre otros.
           </h2>
@@ -67,7 +67,7 @@
             // query term.
             $searchResponse = $youtube->search->listSearch('id,snippet', array(
               'q'          => $_GET['q'],
-              'maxResults' => 9,
+              'maxResults' => 40,
               'type'       => 'video'
             ));
 
@@ -79,7 +79,7 @@
 
             foreach ($searchResponse['items'] as $searchResult)
             {
-              $videos .= '<div class="col-sm-6 col-md-4">
+              $videos .= '<div class="col-xs-12 col-sm-6 resultados_videos">
     <div class="thumbnail"><iframe width="100%" height="200"
 src="https://www.youtube.com/embed/' . $searchResult['id']['videoId'] . '">
 </iframe>
@@ -98,16 +98,18 @@ src="https://www.youtube.com/embed/' . $searchResult['id']['videoId'] . '">
 
             $htmlBody .= <<<END
     <h3><a name="videos_anchor" href="#videos">Videos</a></h3>
+                <div class="text-center"><div class="page-selection"></div></div>
     $videos
+                <div class="text-center"><div class="page-selection"></div></div>
 END;
           }
           catch (Google_Service_Exception $e)
           {
-            $htmlBody .= sprintf('<p>A service error occurred: <code>%s</code></p>', htmlspecialchars($e->getMessage()));
+            $htmlBody .= sprintf('<p>Error proveniendo de Youtube: <code>%s</code></p>', htmlspecialchars($e->getMessage()));
           }
           catch (Google_Exception $e)
           {
-            $htmlBody .= sprintf('<p>An client error occurred: <code>%s</code></p>', htmlspecialchars($e->getMessage()));
+            $htmlBody .= sprintf('<p>Error en tu explorador: <code>%s</code></p>', htmlspecialchars($e->getMessage()));
           }
         }
         ?>
@@ -214,6 +216,27 @@ END;
           });
 <?php if ($_GET['q']): ?>
             var aTag = $("a[name='videos_anchor']");
-            $('html,body').animate({scrollTop: aTag.offset().top + 20}, 'slow');
+            $('html,body').animate({scrollTop: aTag.offset().top - 80}, 'slow');
 <?php endif; ?>
+
+
+          // init bootpag
+          var results_per_page = 4;
+          $('.resultados_videos').hide();
+
+          $('.page-selection').bootpag({
+            total: 7
+          }).on("page", function (event, num) {
+            $('.resultados_videos').hide();
+            $('.resultados_videos').each(function () {
+              if ( $(this).index() < num * results_per_page && $(this).index() >= (num-1) * results_per_page ) {
+                $(this).show();
+              }
+            });
+
+          });
+          $('.resultados_videos').slice( 0,results_per_page ).show();
+          
+
+
 </script>

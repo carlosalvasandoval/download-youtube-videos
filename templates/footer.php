@@ -21,5 +21,6 @@
     title:"Hey! mira esta herramienta para descargar videos de youtube GRATIS!! "
   });
 </script>
+<script type="text/javascript" src="js/query.bootpag.min.js"></script>
 </body>
 </html>
