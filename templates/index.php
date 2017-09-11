@@ -45,6 +45,14 @@
           </p>
         </div>
         <?php
+
+        function covtime($youtube_time)
+        {
+          $start = new DateTime('@0'); // Unix epoch
+          $start->add(new DateInterval($youtube_time));
+          return $start->format('H:i:s');
+        }
+
         $htmlBody = '';
 
 // This code will execute if the user entered a search query in the form
@@ -66,25 +74,25 @@
             // Call the search.list method to retrieve results matching the specified
             // query term.
             $searchResponse = $youtube->search->listSearch('id,snippet', array(
-              'q'          => $_GET['q'],
-              'maxResults' => 40,
-              'type'       => 'video'
+              'q'               => $_GET['q'],
+              'maxResults'      => 32,
+              'type'            => 'video',
+              'videoEmbeddable' => 'true'
             ));
 
             // Add each result to the appropriate list, and then display the lists of
             // matching videos, channels, and playlists.
 
             $videos = '<div class="row videos_resultados">';
-
-
+            $videos_html = array();
             foreach ($searchResponse['items'] as $searchResult)
             {
-              $videos .= '<div class="col-xs-12 col-sm-6 resultados_videos">
-    <div class="thumbnail"><iframe width="100%" height="200"
+              $videos_html[$searchResult['id']['videoId']] = '<div class="col-xs-12 col-sm-6 resultados_videos">
+    <div class="thumbnail"><iframe width="100%" height="200" frameborder = "0"
 src="https://www.youtube.com/embed/' . $searchResult['id']['videoId'] . '">
 </iframe>
       <div class="caption">
-        <p>' . $searchResult['snippet']['title'] . '</p>
+        <p><span class="label label-default">%s</span> ' . $searchResult['snippet']['title'] . '</p>
         
         <p class="text-center">
         <button data-loading-text="Generando Formatos ..." class="btn btn-danger descargar_youtube_btn btn-sm" video_id="' . $searchResult['id']['videoId'] . '" role="button">'
@@ -93,8 +101,17 @@ src="https://www.youtube.com/embed/' . $searchResult['id']['videoId'] . '">
     </div>
   </div>';
             }
-            $videos .= ' 
-</div>';
+            $videos_ids = implode(',', array_keys($videos_html));
+            $videos_raw_info = file_get_contents("https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=" . $videos_ids . "&key=" . $DEVELOPER_KEY);
+            $videos_info = json_decode($videos_raw_info, true);
+
+            foreach ($videos_info['items'] as $video_info)
+            {
+              $tiempo = covtime($video_info['contentDetails']['duration']);
+              $videos_html[$video_info['id']] = str_replace('%s', $tiempo, $videos_html[$video_info['id']]);
+            }
+            $videos .= implode(' ', $videos_html);
+            $videos .= '</div>';
 
             $htmlBody .= <<<END
     <h3><a name="videos_anchor" href="#videos">Videos</a></h3>
@@ -125,7 +142,7 @@ END;
             </div>
             <form method="GET">
               <div class="input-group" style="margin-bottom:10px">
-                <input type="search" class="form-control" id="q" name="q" placeholder="Buscar por URL o título de video en Youtube.com">
+                <input type="search" class="form-control" id="q" name="q" placeholder="Buscar por URL o título de video en Youtube.com" value="<?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?>">
                 <span class="input-group-btn">
                   <button class="btn btn-danger" type="submit">
                     <i class="glyphicon glyphicon-search"></i></button>
@@ -225,18 +242,18 @@ END;
           $('.resultados_videos').hide();
 
           $('.page-selection').bootpag({
-            total: 7
+            total: 8
           }).on("page", function (event, num) {
             $('.resultados_videos').hide();
             $('.resultados_videos').each(function () {
-              if ( $(this).index() < num * results_per_page && $(this).index() >= (num-1) * results_per_page ) {
+              if ($(this).index() < num * results_per_page && $(this).index() >= (num - 1) * results_per_page) {
                 $(this).show();
               }
             });
 
           });
-          $('.resultados_videos').slice( 0,results_per_page ).show();
-          
+          $('.resultados_videos').slice(0, results_per_page).show();
+
 
 
 </script>

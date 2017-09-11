@@ -12,7 +12,7 @@
 <script>
   $("body").floatingSocialShare({
     buttons: [
-      "facebook", "google-plus", "linkedin", "pinterest",
+      "facebook", "google-plus", "linkedin",
       "twitter", "whatsapp"
     ],
     twitter_counter: true,

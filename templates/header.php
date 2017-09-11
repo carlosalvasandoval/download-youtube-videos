@@ -65,19 +65,19 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<!--          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
+          </button>-->
           <a class="navbar-brand" href="http://descargarvideoyoutube.com/">DescargarVideoYoutube.com</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+<!--        <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="./">Descargar</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>/.nav-collapse -->
       </div>
     </nav>
     <div class="container">
