@@ -10,7 +10,7 @@
       if ($this->get('show_thumbnail') === true)
       {
         ?>
-        <a href="<?php echo $this->get('thumbnail_anchor'); ?>" target="_blank"><img src="<?php echo $this->get('thumbnail_src'); ?>" border="0" hspace="2" vspace="2"></a>
+        <img src="<?php echo $this->get('thumbnail_src'); ?>" style="border: 0" alt="<?php echo $this->get('video_title'); ?>"/>
       <?php } ?>
       <p><?php echo $this->get('video_title'); ?></p>
     </div>
@@ -84,7 +84,7 @@
             if ($format['show_proxy_url'] === true)
             {
               ?>
-              <a class="btn btn-primary btn-download" href="<?php echo $format['proxy_url']; ?>" class="mime">
+              <a class="btn btn-primary btn-download mime" href="<?php echo $format['proxy_url']; ?>">
                 <i class="glyphicon glyphicon-download-alt"></i> Descargar - <fsize><?php echo $format['size']; ?></fsize></a>
             <?php } ?>
             <div class="label label-warning">quality: <?php echo $format['quality']; ?></div>
@@ -108,92 +108,92 @@
       </div>
 
 
-    <hr />
-    <!--    <h2>Video y audio por separado</h2>
-        <ul class="dl-list">
-    <?php
-    foreach ($this->get('formats', []) as $format)
-    {
-      ?>
-                              <li>
+      <hr />
+      <!--    <h2>Video y audio por separado</h2>
+          <ul class="dl-list">
       <?php
-      if ($format['show_direct_url'] === true)
+      foreach ($this->get('formats', []) as $format)
       {
         ?>
-                                                    <span class="label label-info h5"><?php echo $format['type']; ?></span>
+                                  <li>
         <?php
-      }
-      else
-      {
-        ?>
-                                                    <span class="mime"><?php echo $format['type']; ?></span>
+        if ($format['show_direct_url'] === true)
+        {
+          ?>
+                                                          <span class="label label-info h5"><?php echo $format['type']; ?></span>
+          <?php
+        }
+        else
+        {
+          ?>
+                                                          <span class="mime"><?php echo $format['type']; ?></span>
+        <?php } ?>
+                          
+        <?php
+        if ($format['show_proxy_url'] === true)
+        {
+          ?>
+                                                          <a class="btn btn-primary btn-download" href="<?php echo $format['proxy_url']; ?>" class="mime">
+                                                            <i class="glyphicon glyphicon-download-alt"></i> Descargar - <fsize><?php echo $format['size']; ?></fsize></a>
+        <?php } ?>
+                                    <div class="label label-warning">quality: <?php echo $format['quality']; ?></div>
+                                  </li>
       <?php } ?>
-                      
+          </ul>-->
       <?php
-      if ($format['show_proxy_url'] === true)
+      if ($this->get('showMP3Download', false) === true)
       {
         ?>
-                                                    <a class="btn btn-primary btn-download" href="<?php echo $format['proxy_url']; ?>" class="mime">
-                                                      <i class="glyphicon glyphicon-download-alt"></i> Descargar - <fsize><?php echo $format['size']; ?></fsize></a>
+        <h2>Convertir y descargar a .mp3</h2>
+        <ul class="dl-list">
+          <li>
+            <a class="btn btn-default btn-type disabled mime" href="#">audio/mp3</a>
+            <a class="btn btn-primary btn-download mime" href="<?php echo $this->get('mp3_download_url'); ?>"><i class="glyphicon glyphicon-download-alt"></i> Convertir y Descargar</a>
+            <div class="label label-warning">quality: <?php echo $this->get('mp3_download_quality'); ?></div>
+          </li>
+        </ul>
       <?php } ?>
-                                <div class="label label-warning">quality: <?php echo $format['quality']; ?></div>
-                              </li>
+      <?php
+      if ($this->get('showBrowserExtensions', false) === true)
+      {
+        ?>
+        <p><a href="ytdl.user.js" class="userscript btn btn-mini" title="Install chrome extension to view a 'Download' link to this application on Youtube video pages."> Install Chrome Extension </a></p>
+      <?php } ?>
     <?php } ?>
-        </ul>-->
-    <?php
-    if ($this->get('showMP3Download', false) === true)
-    {
-      ?>
-      <h2>Convertir y descargar a .mp3</h2>
-      <ul class="dl-list">
-        <li>
-          <a class="btn btn-default btn-type disabled" href="#" class="mime">audio/mp3</a>
-          <a class="btn btn-primary btn-download" href="<?php echo $this->get('mp3_download_url'); ?>" class="mime"><i class="glyphicon glyphicon-download-alt"></i> Convertir y Descargar</a>
-          <div class="label label-warning">quality: <?php echo $this->get('mp3_download_quality'); ?></div>
-        </li>
-      </ul>
-    <?php } ?>
-    <?php
-    if ($this->get('showBrowserExtensions', false) === true)
-    {
-      ?>
-      <p><a href="ytdl.user.js" class="userscript btn btn-mini" title="Install chrome extension to view a 'Download' link to this application on Youtube video pages."> Install Chrome Extension </a></p>
-    <?php } ?>
-  <?php } ?>
-</div>
-<div class="col-sm-5 col-xs-12">
-  <div class="hidden-xs">
-    <script type="text/javascript">
-        (function () {
-          if (window.CHITIKA === undefined) {
-            window.CHITIKA = {'units': []};
-          }
-          ;
-          var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 300, "height": 250, "sid": "Chitika Default"};
-          var placement_id = window.CHITIKA.units.length;
-          window.CHITIKA.units.push(unit);
-          document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-        }());
-    </script>
-    <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
   </div>
-
-</div>
-<hr />
-<div class="clearfix"></div>
-</div>
-<?php echo $this->inc('footer.php'); ?>
-<script>
-        $(document).ready(function () {
-          setTimeout(function () {
-            $('fsize').each(function (k, v) {
-              console.log($(v).text());
-              if (!$(v).text() || $(v).text() == '0B') {
-                location.reload();
-                return false;
+  <div class="col-sm-5 col-xs-12">
+    <div class="hidden-xs">
+      <script type="text/javascript">
+            (function () {
+              if (window.CHITIKA === undefined) {
+                window.CHITIKA = {'units': []};
               }
-            });
-          }, 1000);
+              ;
+              var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 300, "height": 250, "sid": "Chitika Default"};
+              var placement_id = window.CHITIKA.units.length;
+              window.CHITIKA.units.push(unit);
+              document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+            }());
+      </script>
+      <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+    </div>
 
-        });
+  </div>
+  <hr />
+  <div class="clearfix"></div>
+</div>
+<script>
+          $(document).ready(function () {
+            setTimeout(function () {
+              $('fsize').each(function (k, v) {
+                console.log($(v).text());
+                if (!$(v).text() || $(v).text() == '0B') {
+                  location.reload();
+                  return false;
+                }
+              });
+            }, 1000);
+
+          });
 </script>
+<?php echo $this->inc('footer.php'); ?>
