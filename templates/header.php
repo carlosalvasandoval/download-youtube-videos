@@ -1,9 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
     <meta charset="utf-8"/>
     <title><?php echo $this->get('title', 'Descargar videos de Youtube'); ?></title>
-    <meta name="keywords" content="Descargar videos de youtube,descargar videos gratis, youtube video, descargar youtube 3GP, descargar youtube, convertidor mp3,mp3 youtube ,youtube musica, convertidor youtube, youtube a mp3, youtube a mp4, convertir youtube, descargar youtube a FLV"/>
     <meta name="description" content="Descargar videos gratis de youtube en 3 simples pasos!!"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta property="og:url"                content="http://descargarvideoyoutube.com" />

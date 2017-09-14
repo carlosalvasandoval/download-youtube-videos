@@ -114,7 +114,7 @@ src="https://www.youtube.com/embed/' . $searchResult['id']['videoId'] . '">
             $videos .= '</div>';
 
             $htmlBody .= <<<END
-    <h3><a name="videos_anchor" href="#videos">Videos</a></h3>
+    <h3><a name="videos_anchor" href="#videos">Estos videos estan listados para descargarlos</a></h3>
                 <div class="text-center"><div class="page-selection"></div></div>
     $videos
                 <div class="text-center"><div class="page-selection"></div></div>
@@ -134,13 +134,15 @@ END;
           <div class="panel-body">
             <div class="video-info">
               <h2 class="h3">Pasos para descargar videos de youtube:</h2>
-              <ol class="h5">
-                <li>Ingresa el <b>título del video</b> o ingresa la <b>URL</b> de algun video de Youtube en la casilla de busqueda.</li>
-                <li>Clic en el botón "descargar" que se ubica debajo del video.</li>
-                <li>Finalmente elige el formato que desees y aprieta el botón "descargar"</li>
-              </ol>
+              <p>
+                <ol class="h5">
+                  <li>Ingresa el <b>título del video</b> o ingresa la <b>URL</b> de algun video de <a href="http://youtube.com" target="_blank">Youtube</a> en la casilla de busqueda.</li>
+                  <li>Clic en el botón "Descargar video" que se ubica debajo del video.</li>
+                  <li>Finalmente elige el formato que desees y aprieta el botón "descargar"</li>
+                </ol>
+                </p>
             </div>
-            <form method="GET">
+            <form method="get" action="/">
               <div class="input-group" style="margin-bottom:10px">
                 <input type="search" class="form-control" id="q" name="q" placeholder="Buscar por URL o título de video en Youtube.com" value="<?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?>">
                 <span class="input-group-btn">
@@ -152,7 +154,7 @@ END;
           </div>
         </div>
         <?php echo $htmlBody ?>   
-        <form class="" method="get" id="download" action="getvideo.php">
+        <form method="get" id="download" action="getvideo.php">
 
           <div class="visible-xs-block">
             <script type="text/javascript">
@@ -217,7 +219,7 @@ END;
 </div>
 
 <?php echo $this->inc('footer.php'); ?>
-<script>
+<script type="text/javascript">
           $(document).on('click', '.descargar_youtube_btn', function () {
             console.log('generando formatos');
             var video_id = $(this).attr('video_id');
