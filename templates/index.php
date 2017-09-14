@@ -35,7 +35,7 @@
       <div class="col-md-10">
         <div class="text-center">
           <h1 class="form-download-heading">
-            <img src="img/descargarvideoyoutube_youtube_logo.png" alt="Descargar videos de youtube" class="img-responsive" style="display: inline"/> Descargar videos de Youtube</h1>
+            <img src="img/descargarvideoyoutube_youtube_logo.png" alt="logo de youtube" class="img-responsive" style="display: inline"/> Descargar videos de Youtube</h1>
           <h2 class="help-block h4" style="line-height: 25px;">
             Está herramienta te permite descargar videos de youtube convirtiéndolos a múltiples formatos:
             <br> <span class="label label-default">youtube a mp4</span> ,<span class="label label-default">youtube a mp3</span>, <span class="label label-default">youtube a 3gpp</span> entre otros.
