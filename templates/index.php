@@ -133,14 +133,14 @@ END;
         <div class="panel panel-default" style="border: 3px dashed red">
           <div class="panel-body">
             <div class="video-info">
-              <h2 class="h3">Pasos para descargar videos de youtube:</h2>
               <p>
-                <ol class="h5">
-                  <li>Ingresa el <b>título del video</b> o ingresa la <b>URL</b> de algun video de <a href="http://youtube.com" target="_blank">Youtube</a> en la casilla de busqueda.</li>
-                  <li>Clic en el botón "Descargar video" que se ubica debajo del video.</li>
-                  <li>Finalmente elige el formato que desees y aprieta el botón "descargar"</li>
-                </ol>
-                </p>
+              <h2 class="h3">Pasos para descargar videos de youtube:</h2>
+              <ol class="h5">
+                <li>Ingresa el <b>título del video</b> o ingresa la <b>URL</b> de algun video de <a href="http://youtube.com" target="_blank">Youtube</a> en la casilla de busqueda.</li>
+                <li>Clic en el botón "Descargar video" que se ubica debajo del video.</li>
+                <li>Finalmente elige el formato que desees y aprieta el botón "descargar"</li>
+              </ol>
+              </p>
             </div>
             <form method="get" action="/">
               <div class="input-group" style="margin-bottom:10px">
@@ -217,45 +217,4 @@ END;
 
   </div>
 </div>
-
 <?php echo $this->inc('footer.php'); ?>
-<script type="text/javascript">
-          $(document).on('click', '.descargar_youtube_btn', function () {
-            console.log('generando formatos');
-            var video_id = $(this).attr('video_id');
-            $('.descargar_youtube_btn').addClass('disabled');
-            $('.descargar_youtube_btn').attr('disabled', 'disabled');
-            $(this).button('loading');
-            $(this).before('<div class="progress">' +
-              '<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">' +
-              'Generando formatos . . .<span class="sr-only">45% Complete</span>' +
-              ' </div>' +
-              '</div>');
-            window.location.href = "getvideo.php?videoid=https://www.youtube.com/watch?v=" + video_id + '&type=Descargar';
-          });
-<?php if ($_GET['q']): ?>
-            var aTag = $("a[name='videos_anchor']");
-            $('html,body').animate({scrollTop: aTag.offset().top - 80}, 'slow');
-<?php endif; ?>
-
-
-          // init bootpag
-          var results_per_page = 4;
-          $('.resultados_videos').hide();
-
-          $('.page-selection').bootpag({
-            total: 8
-          }).on("page", function (event, num) {
-            $('.resultados_videos').hide();
-            $('.resultados_videos').each(function () {
-              if ($(this).index() < num * results_per_page && $(this).index() >= (num - 1) * results_per_page) {
-                $(this).show();
-              }
-            });
-
-          });
-          $('.resultados_videos').slice(0, results_per_page).show();
-
-
-
-</script>
