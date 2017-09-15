@@ -15,7 +15,7 @@
         <h4 class="modal-title" id="myModalLabel">Tutorial de uso</h4>
       </div>
       <div class="modal-body">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FmtpqbVe_Uo" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/FmtpqbVe_Uo" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>

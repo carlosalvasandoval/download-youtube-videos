@@ -36,19 +36,36 @@ require 'header.php';
       optimizado para móviles y que pesa menos que un mp4. En el caso de 
       querer covertir el video a audio; al igual que los ordenadores, será mp3. 
     </p>
-    <script type="text/javascript">
-      (function () {
-        if (window.CHITIKA === undefined) {
-          window.CHITIKA = {'units': []};
-        }
-        ;
-        var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 728, "height": 90, "sid": "Chitika Default"};
-        var placement_id = window.CHITIKA.units.length;
-        window.CHITIKA.units.push(unit);
-        document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-      }());
-    </script>
-    <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+    <div class="visible-xs-block">
+      <script type="text/javascript">
+        (function () {
+          if (window.CHITIKA === undefined) {
+            window.CHITIKA = {'units': []};
+          }
+          ;
+          var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 320, "height": 50, "sid": "Chitika Default"};
+          var placement_id = window.CHITIKA.units.length;
+          window.CHITIKA.units.push(unit);
+          document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+        }());
+      </script>
+      <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+    </div>
+    <div class="hidden-xs">
+      <script type="text/javascript">
+        (function () {
+          if (window.CHITIKA === undefined) {
+            window.CHITIKA = {'units': []};
+          }
+          ;
+          var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 728, "height": 90, "sid": "Chitika Default"};
+          var placement_id = window.CHITIKA.units.length;
+          window.CHITIKA.units.push(unit);
+          document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+        }());
+      </script>
+      <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+    </div>
     <h2>¿Qué ventajas consigo al descargarme videos de youtube en vez de mirarlos directamente?</h2>
     <ul>
       <li>Pues la primera ventaja es que al tener el video almacenado en tu dispositivo cada vez que lo veas no consumiras tu plan de datos de internet.</li>
