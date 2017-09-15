@@ -17,10 +17,6 @@
       <div class="modal-body">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/FmtpqbVe_Uo" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
     </div>
   </div>
 </div>
