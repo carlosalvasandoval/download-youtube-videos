@@ -142,7 +142,7 @@ END;
               </ol>
               </p>
             </div>
-            <form method="get" action="/">
+            <form method="get" action="">
               <div class="input-group" style="margin-bottom:10px">
                 <input type="search" class="form-control" id="q" name="q" placeholder="Buscar por URL o título de video en Youtube.com" value="<?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?>">
                 <span class="input-group-btn">

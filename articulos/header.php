@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title><?php echo $this->get('title', 'Descargar videos de Youtube'); ?></title>
-    <meta name="description" content="Descargar videos gratis de youtube en 3 simples pasos!!"/>
+    <title><?php echo $title ?></title>
+    <meta name="description" content="¿Cómo descargar videos de youtube?"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta property="og:url"                content="http://descargarvideoyoutube.com" />
     <meta property="og:type"               content="website" />
@@ -11,10 +11,10 @@
     <meta property="og:description"        content="Herramienta gratuita para descargar videos de Youtube" />
     <meta property="og:image"              content="http://www.descargarvideoyoutube.com/img/descargarvideoyoutube_facebook_img.png" />
     <meta property="fb:app_id"             content="270535033464194" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link href="vendor/jquery-floating-social-share-master/dist/jquery.floating-social-share.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/custom.css" rel="stylesheet"/>
+    <link href="../vendor/jquery-floating-social-share-master/dist/jquery.floating-social-share.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/custom.css" rel="stylesheet"/>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
 
     <style type="text/css">
