@@ -85,7 +85,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="http://descargarvideoyoutube.com/articulos/como-puedo-descargar-videos-de-youtube-gratuitamente">¿Cómo descargar?</a></li>
+            <li><a href="http://descargarvideoyoutube.com/articulos/como-puedo-descargar-videos-de-youtube">¿Cómo descargar?</a></li>
           </ul>
           <ul class="nav navbar-nav">
             <li><a data-toggle="modal" data-target="#modalTutorial">Tutorial de uso</a></li>
