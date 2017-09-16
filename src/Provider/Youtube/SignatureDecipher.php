@@ -137,7 +137,7 @@ class SignatureDecipher
 			else if($i==count($deciphers)-1)
 			{
               header("Refresh:0");
-				die("\n==== Failed to get deciphers function ====");
+				die();
 			}
 		}
 
