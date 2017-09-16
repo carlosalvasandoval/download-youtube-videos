@@ -61,23 +61,28 @@
         <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
       </div>
 
-      <ul class="dl-list">
+      <ul class="list-group">
         <?php
         foreach ($this->get('streams', []) as $format)
         {
           ?>
-          <li>
+          <li class="list-group-item">
             <?php
             if ($format['show_direct_url'] === true)
             {
               ?>
-              <span class="label label-info h5"><?php echo $format['type']; ?></span>
+              <span class="badge"><i class="glyphicon <?php echo strpos($format['type'], 'audio') !== false ? 'glyphicon-music' : 'glyphicon-facetime-video' ?>"></i>
+                <?php echo $format['type']; ?>
+              </span>
+
               <?php
             }
             else
             {
               ?>
-              <span class="mime"><?php echo $format['type']; ?></span>
+              <span class="badge"><i class="glyphicon <?php echo strpos($format['type'], 'audio') !== false ? 'glyphicon-music' : 'glyphicon-facetime-video' ?>"></i>
+                <?php echo $format['type']; ?>
+              </span>
             <?php } ?>
 
             <?php
@@ -85,9 +90,11 @@
             {
               ?>
               <a class="btn btn-primary btn-download mime" href="<?php echo $format['proxy_url']; ?>">
-                <i class="glyphicon glyphicon-download-alt"></i> Descargar - <fsize><?php echo $format['size']; ?></fsize></a>
+                <i class="glyphicon glyphicon-download-alt"></i> Descargar - <fsize><?php echo $format['size']; ?></fsize> 
+                Calidad: <?php echo $format['quality']; ?>
+              </a>
             <?php } ?>
-            <div class="label label-warning">quality: <?php echo $format['quality']; ?></div>
+
           </li>
         <?php } ?>
       </ul>
@@ -109,37 +116,39 @@
 
 
       <hr />
-      <!--    <h2>Video y audio por separado</h2>
-          <ul class="dl-list">
-      <?php
-      foreach ($this->get('formats', []) as $format)
-      {
-        ?>
-                                  <li>
+      <h2>Video y audio por separado</h2>
+      <ul class="list-group">
         <?php
-        if ($format['show_direct_url'] === true)
+        foreach ($this->get('formats', []) as $format)
         {
           ?>
-                                                          <span class="label label-info h5"><?php echo $format['type']; ?></span>
-          <?php
-        }
-        else
-        {
-          ?>
-                                                          <span class="mime"><?php echo $format['type']; ?></span>
+          <li class="list-group-item">
+            <?php
+            if ($format['show_direct_url'] === true)
+            {
+              ?>
+              <span class="badge <?php echo strpos($format['type'], 'audio') !== false ? 'badge-error' : '' ?>"><i class="glyphicon <?php echo strpos($format['type'], 'audio') !== false ? 'glyphicon-music' : 'glyphicon-facetime-video' ?>"></i>
+                <?php echo $format['type']; ?>
+              </span>
+              <?php
+            }
+            else
+            {
+              ?>
+              <span class="mime"><?php echo $format['type']; ?></span>
+            <?php } ?>
+
+            <?php
+            if ($format['show_proxy_url'] === true)
+            {
+              ?>
+              <a class="btn btn-primary btn-download" href="<?php echo $format['proxy_url']; ?>" class="mime">
+                <i class="glyphicon glyphicon-download-alt"></i> Descargar - <fsize><?php echo $format['size']; ?></fsize></a>
+            <?php } ?>
+            <div class="label label-warning">quality: <?php echo $format['quality']; ?></div>
+          </li>
         <?php } ?>
-                          
-        <?php
-        if ($format['show_proxy_url'] === true)
-        {
-          ?>
-                                                          <a class="btn btn-primary btn-download" href="<?php echo $format['proxy_url']; ?>" class="mime">
-                                                            <i class="glyphicon glyphicon-download-alt"></i> Descargar - <fsize><?php echo $format['size']; ?></fsize></a>
-        <?php } ?>
-                                    <div class="label label-warning">quality: <?php echo $format['quality']; ?></div>
-                                  </li>
-      <?php } ?>
-          </ul>-->
+      </ul>
       <?php
       if ($this->get('showMP3Download', false) === true)
       {
@@ -164,16 +173,16 @@
   <div class="col-sm-5 col-xs-12">
     <div class="hidden-xs">
       <script type="text/javascript">
-            (function () {
-              if (window.CHITIKA === undefined) {
-                window.CHITIKA = {'units': []};
-              }
-              ;
-              var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 300, "height": 250, "sid": "Chitika Default"};
-              var placement_id = window.CHITIKA.units.length;
-              window.CHITIKA.units.push(unit);
-              document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-            }());
+          (function () {
+            if (window.CHITIKA === undefined) {
+              window.CHITIKA = {'units': []};
+            }
+            ;
+            var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 300, "height": 250, "sid": "Chitika Default"};
+            var placement_id = window.CHITIKA.units.length;
+            window.CHITIKA.units.push(unit);
+            document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+          }());
       </script>
       <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
     </div>

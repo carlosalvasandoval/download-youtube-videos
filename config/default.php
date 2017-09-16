@@ -32,7 +32,7 @@ return [
    * 1 => show thumbnail image directly from YouTube
    * 2 => show thumbnail image by proxy from this server
    */
-  'ThumbnailImageMode' => 2,
+  'ThumbnailImageMode' => 1,
   /**
    * Video Download Link Configuration
    * 'direct' => show only direct download link
