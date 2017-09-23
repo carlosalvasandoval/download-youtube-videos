@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <title><?php echo $title ?></title>
     <meta name="description" content="¿Cómo descargar videos de youtube?"/>
+    <meta http-equiv="Cache-Control" content="max-age=3600">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta property="og:url"                content="http://descargarvideoyoutube.com" />
     <meta property="og:type"               content="website" />
