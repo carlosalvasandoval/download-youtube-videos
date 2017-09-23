@@ -43,6 +43,6 @@
     });
 });
 </script>
-<script type="text/javascript" src="js/query.bootpag.min.js"></script>
+<script type="text/javascript" src="../js/query.bootpag.min.js"></script>
 </body>
 </html>
