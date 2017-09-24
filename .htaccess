@@ -12,7 +12,7 @@ RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
   # CSS
 
-    ExpiresByType text/css                              "access plus 1 year"
+    ExpiresByType text/css                              "access plus 1 week"
 
 
   # Data interchange
@@ -31,8 +31,8 @@ RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
   # Favicon (cannot be renamed!) and cursor images
 
-    ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
-    ExpiresByType image/x-icon                          "access plus 1 week"
+    ExpiresByType image/vnd.microsoft.icon              "access plus 1 year"
+    ExpiresByType image/x-icon                          "access plus 1 year"
 
   # HTML
 
@@ -41,9 +41,9 @@ RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
   # JavaScript
 
-    ExpiresByType application/javascript                "access plus 1 year"
-    ExpiresByType application/x-javascript              "access plus 1 year"
-    ExpiresByType text/javascript                       "access plus 1 year"
+    ExpiresByType application/javascript                "access plus 1 week"
+    ExpiresByType application/x-javascript              "access plus 1 week"
+    ExpiresByType text/javascript                       "access plus 1 week"
 
 
   # Manifest files
@@ -58,10 +58,10 @@ RewriteRule ^([^\.]+)$ $1.php [NC,L]
     ExpiresByType audio/ogg                             "access plus 1 month"
     ExpiresByType image/bmp                             "access plus 1 month"
     ExpiresByType image/gif                             "access plus 1 month"
-    ExpiresByType image/jpeg                            "access plus 1 month"
-    ExpiresByType image/png                             "access plus 1 month"
-    ExpiresByType image/svg+xml                         "access plus 1 month"
-    ExpiresByType image/webp                            "access plus 1 month"
+    ExpiresByType image/jpeg                            "access plus 1 week"
+    ExpiresByType image/png                             "access plus 1 week"
+    ExpiresByType image/svg+xml                         "access plus 1 week"
+    ExpiresByType image/webp                            "access plus 1 week"
     ExpiresByType video/mp4                             "access plus 1 month"
     ExpiresByType video/ogg                             "access plus 1 month"
     ExpiresByType video/webm                            "access plus 1 month"
