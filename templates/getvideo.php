@@ -4,7 +4,7 @@
   <h2> No te olvides de compartir esta aplicación entre tus amigos </h2>
   <img src="img/descargarvideoyoutube_like.png" alt="compartir con amigos"/>
   <hr />
-  <div class="col-sm-7 col-xs-12">
+  <div class="col-xs-12">
     <div id="info">
       <?php
       if ($this->get('show_thumbnail') === true)
@@ -45,21 +45,6 @@
       <?php } ?>
       <h2>Lista de formatos para descargar</h2>
 
-      <div class="visible-xs-block">
-        <script type="text/javascript">
-          (function () {
-            if (window.CHITIKA === undefined) {
-              window.CHITIKA = {'units': []};
-            }
-            ;
-            var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 320, "height": 50, "sid": "Chitika Default"};
-            var placement_id = window.CHITIKA.units.length;
-            window.CHITIKA.units.push(unit);
-            document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-          }());
-        </script>
-        <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
-      </div>
 
       <ul class="list-group">
         <?php
@@ -98,21 +83,7 @@
           </li>
         <?php } ?>
       </ul>
-      <div class="hidden-xs">
-        <script type="text/javascript">
-          (function () {
-            if (window.CHITIKA === undefined) {
-              window.CHITIKA = {'units': []};
-            }
-            ;
-            var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 728, "height": 90, "sid": "Chitika Default"};
-            var placement_id = window.CHITIKA.units.length;
-            window.CHITIKA.units.push(unit);
-            document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-          }());
-        </script>
-        <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
-      </div>
+
 
 
       <hr />
@@ -170,39 +141,22 @@
       <?php } ?>
     <?php } ?>
   </div>
-  <div class="col-sm-5 col-xs-12">
-    <div class="hidden-xs">
-      <script type="text/javascript">
-          (function () {
-            if (window.CHITIKA === undefined) {
-              window.CHITIKA = {'units': []};
-            }
-            ;
-            var unit = {"calltype": "async[2]", "publisher": "carlosalvasandoval", "width": 300, "height": 250, "sid": "Chitika Default"};
-            var placement_id = window.CHITIKA.units.length;
-            window.CHITIKA.units.push(unit);
-            document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
-          }());
-      </script>
-      <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
-    </div>
-
-  </div>
   <hr />
   <div class="clearfix"></div>
 </div>
-<script>
-          $(document).ready(function () {
-            setTimeout(function () {
-              $('fsize').each(function (k, v) {
-                console.log($(v).text());
-                if (!$(v).text() || $(v).text() == '0B') {
-                  location.reload();
-                  return false;
-                }
-              });
-            }, 1000);
 
-          });
-</script>
 <?php echo $this->inc('footer.php'); ?>
+<script>
+  $(document).ready(function () {
+    setTimeout(function () {
+      $('fsize').each(function (k, v) {
+        console.log($(v).text());
+        if (!$(v).text() || $(v).text() == '0B') {
+          location.reload();
+          return false;
+        }
+      });
+    }, 1000);
+
+  });
+</script>
