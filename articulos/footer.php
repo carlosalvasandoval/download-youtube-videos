@@ -20,9 +20,9 @@
     </div>
   </div>
 </div>
-<script type="text/javascript" src="../js/jquery.min.js" ></script>
-<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
-<script src="../vendor/jquery-floating-social-share-master/dist/jquery.floating-social-share.min.js" type="text/javascript"></script>
+<script type="text/javascript" async src="../js/jquery.min.js" ></script>
+<script type="text/javascript" async src="../js/bootstrap.min.js" ></script>
+<script type="text/javascript" async src="../vendor/jquery-floating-social-share-master/dist/jquery.floating-social-share.min.js" ></script>
 <script>
   $("body").floatingSocialShare({
     buttons: [
