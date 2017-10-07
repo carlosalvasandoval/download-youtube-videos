@@ -4,7 +4,7 @@ RewriteRule ^.*\.mp4$ getvideo.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
-RewriteCond %{QUERY_STRING} ^watch=(.+?)$
+RewriteCond %{QUERY_STRING} ^watch?v=(.+?)$
 RewriteRule ^ /?q=https://youtube.com/watch?v=%1 [R=301,L]
 
 
