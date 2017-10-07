@@ -3,7 +3,10 @@ RewriteEngine On
 RewriteRule ^.*\.mp4$ getvideo.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
-RewriteRule ^/watch?v=(.*)$ https://descargarvideoyoutube.com/?q=$1 [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^watch=(.+?)$
+RewriteRule ^ /q=%1 [R=301,L]
+
 
 <IfModule mod_expires.c>
 
