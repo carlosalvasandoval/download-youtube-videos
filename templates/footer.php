@@ -18,7 +18,7 @@ include 'partials/modals.php';
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="js/jquery-validator/jquery.validate.min.js" type="text/javascript"></script>
 <script src="js/jquery-validator/localization/messages_es.min.js" type="text/javascript"></script>
-<script type="text/javascript"  src="js/custom.js?time=<?php echo time()?>" ></script>
+<script type="text/javascript"  src="js/custom.js" ></script>
 <script type="text/javascript" src="js/query.bootpag.min.js"></script>
 <script type="text/javascript">
   $(document).on('click', '.descargar_youtube_btn', function () {
