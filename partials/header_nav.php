@@ -74,9 +74,9 @@
     </nav>
     <!-- Page Content -->
     <div id="page-content-wrapper">
-      <div style="background: #ccc; height: 60px; position: fixed; top: 0; width: 100%; padding-left: 20px; padding-top: 20px; z-index: 1" 
+      <div style="background: #222; height: 60px; position: fixed; top: 0; width: 100%; padding-left: 20px; padding-top: 20px; z-index: 1" 
            class="text-center visible-xs-block">
-        <a style="color: black"  href="http://descargarvideoyoutube.com/">DescargarVideoYoutube.com</a>
+        <a style="color: white"  href="http://descargarvideoyoutube.com/" class="h5">DescargarVideoYoutube.com</a>
       </div>
       <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
         <span class="hamb-top"></span>
