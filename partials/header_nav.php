@@ -14,8 +14,8 @@
         <li><a href="http://descargarvideoyoutube.com/articulos/como-puedo-descargar-videos-de-youtube">¿Cómo descargar?</a></li>
       </ul>
       <ul class="nav navbar-nav">
-        <li><a data-toggle="modal" data-target="#modalTutorial">Tutorial de uso</a></li>
-        <li><a data-toggle="modal" data-target="#modalFeedback">Feedback</a></li>
+        <li><a data-toggle="modal" data-target="#modalTutorial"><i class="glyphicon glyphicon-facetime-video"></i> Tutorial</a></li>
+        <li><a data-toggle="modal" data-target="#modalFeedback"><i class="glyphicon glyphicon-envelope"></i> Feedback</a></li>
       </ul>
     </div>
   </div>
