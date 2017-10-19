@@ -119,11 +119,13 @@ $(document).ready(function () {
         trigger.removeClass('is-open');
         trigger.addClass('is-closed');
         isClosed = false;
+        $('.modal').css('width', '+=0');
       } else {   
         overlay.show();
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');
         isClosed = true;
+        $('.modal').css('width', '+=0');
       }
   }
   
