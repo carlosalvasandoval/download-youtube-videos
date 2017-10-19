@@ -6,6 +6,8 @@
   <a href="http://descargarvideoyoutube.com" class="btn btn-link"> Descargar videos de youtube sin programas</a> 
 </div>
 </div>
+</div>
+</div>
 <?php
 include '../partials/modals.php';
 ?>

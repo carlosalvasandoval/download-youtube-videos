@@ -13,43 +13,5 @@
     <meta property="og:image"              content="http://www.descargarvideoyoutube.com/img/descargarvideoyoutube_facebook_img.png" />
     <meta property="fb:app_id"             content="270535033464194" />
 
-    <style type="text/css">
-      #info {
-        padding: 0 0 0 130px;
-        position: relative;
-        height: 100px;
-      }
-      #info img {
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 120px;
-        height: 90px
-      }
-      .videos_resultados.row {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display:         flex;
-        flex-wrap: wrap;
-      }
-      .videos_resultados.row > [class*='col-'] {
-        display: flex;
-        flex-direction: column;
-      }
-      @media screen and (max-width: 768px) {
-        h1{
-          font-size:26px;
-        }
-        h2{
-          font-size:22px;
-        }
-        h3{
-          font-size:18px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <?php include 'partials/header_nav.php';?>
-    <div class="container">
+    <?php include 'partials/header_nav.php'; ?>
+
