@@ -1,6 +1,7 @@
 <?php
 $title = '¿Cómo puedo descargar videos de youtube gratuitamente? | descargarvideoyoutube.com';
 $description = 'Permite de manera gratuita covertir los videos alojados en youtube a formatos que puedan ser facilmente leidos por nuestro ordenador';
+$img = 'https://descargarvideoyoutube.com/regueton/img/descargarvideoyoutube_como_descargar.jpg';
 require 'header.php';
 ?>
 <div class="panel panel-default">
@@ -9,7 +10,7 @@ require 'header.php';
   </div>
   <div class="panel-body">
     <center>
-      <img src="../img/descargarvideoyoutube_como_descargar.jpg" alt="imagen de como se descarga videos desde youtube" style="margin-bottom: 10px" class="img-thumbnail"/>
+      <img src="img/descargarvideoyoutube_como_descargar.jpg" alt="imagen de como se descarga videos desde youtube" style="margin-bottom: 10px" class="img-thumbnail"/>
     </center>
     <p class="text-justify">
       Pues es muy fácil bajar videos cuando se conoce la herramienta adecuada. Sin duda esta herramienta llamada <a href="/">descargarvideoyoutube.com</a> nos permite
