@@ -70,6 +70,14 @@
             <i class="glyphicon glyphicon-info-sign"></i> ¿Cómo descargar?</a></li>
         <li><a data-toggle="modal" data-target="#modalTutorial"><i class="glyphicon glyphicon-facetime-video"></i> Tutorial</a></li>
         <li><a data-toggle="modal" data-target="#modalFeedback"><i class="glyphicon glyphicon-envelope"></i> Feedback</a></li>
+        <li role="separator" class="divider"></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Articulos <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="dropdown-header">Regueton</li>
+            <li><a href="https://descargarvideoyoutube.com/regueton/arcangel">Arcagel</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <!-- Page Content -->
