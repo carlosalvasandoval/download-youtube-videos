@@ -1,5 +1,5 @@
 <?php
-$title = 'Arcangel nos cuenta sobre su vida | descargarvideoyoutube.com';
+$title = 'Arcangel nos cuenta sobre su vida';
 $description = 'Arcangel nos cuenta un poco de su vida y como inicio en la música';
 $img = 'https://descargarvideoyoutube.com/regueton/img/arcangel.jpg';
 require 'header.php';
