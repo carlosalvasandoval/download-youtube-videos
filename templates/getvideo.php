@@ -2,7 +2,7 @@
 <div class="well row">
   <h1 class="download-heading">Todo listo para que descargues tu video!!</h1>
   <h2> No te olvides de compartir esta aplicación entre tus amigos </h2>
-  <img src="img/descargarvideoyoutube_like.png" alt="compartir con amigos"/>
+  <img src="<?php echo BASE_URL?>/img/descargarvideoyoutube_like.png" alt="compartir con amigos"/>
   <hr />
   <div class="col-xs-12">
     <div id="info">

@@ -120,8 +120,7 @@ catch (Google_Exception $e)
     <a type="button" class="btn btn-info btn-block" href="<?php echo BASE_URL.'/?q=arcangel la maravilla'?>">Buscar más videos de Arcangel</a>
   </div>
 </div>
-<?php
-require 'footer.php';
+<?php include APPPATH.'/templates/footer.php';?>
 
 
 

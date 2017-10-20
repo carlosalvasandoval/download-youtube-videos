@@ -144,3 +144,25 @@ END;
   </div>
 </div>
 <?php echo $this->inc('footer.php'); ?>
+<script type="text/javascript">
+<?php if ($_GET['q']): ?>
+    var aTag = $("a[name='videos_anchor']");
+    $('html,body').animate({scrollTop: aTag.offset().top - 80}, 'slow');
+<?php endif; ?>
+  // init bootpag
+  var results_per_page = 4;
+  $('.resultados_videos').hide();
+
+  $('.page-selection').bootpag({
+    total: 8
+  }).on("page", function (event, num) {
+    $('.resultados_videos').hide();
+    $('.resultados_videos').each(function () {
+      if ($(this).index() < num * results_per_page && $(this).index() >= (num - 1) * results_per_page) {
+        $(this).show();
+      }
+    });
+
+  });
+  $('.resultados_videos').slice(0, results_per_page).show();
+</script>

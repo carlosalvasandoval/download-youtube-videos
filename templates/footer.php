@@ -8,45 +8,21 @@
 </div>
 </div>
 </div>
-<?php
-include 'partials/modals.php';
-?>
+<?php include APPPATH.'/partials/modals.php';?>
 
-<script type="text/javascript"  src="js/jquery.min.js" ></script>
-<script type="text/javascript"  src="js/bootstrap.min.js" ></script>
-<script type="text/javascript"  src="vendor/jquery-floating-social-share-master/dist/jquery.floating-social-share.min.js" ></script>
+<script type="text/javascript"  src="<?php echo BASE_URL?>/js/jquery.min.js" ></script>
+<script type="text/javascript"  src="<?php echo BASE_URL?>/js/bootstrap.min.js" ></script>
+<script type="text/javascript"  src="<?php echo BASE_URL?>/vendor/jquery-floating-social-share-master/dist/jquery.floating-social-share.min.js" ></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
-<script src="js/jquery-validator/jquery.validate.min.js" type="text/javascript"></script>
-<script src="js/jquery-validator/localization/messages_es.min.js" type="text/javascript"></script>
-<script type="text/javascript"  src="js/custom.js" ></script>
-<script type="text/javascript" src="js/query.bootpag.min.js"></script>
-<script type="text/javascript">
-<?php if ($_GET['q']): ?>
-    var aTag = $("a[name='videos_anchor']");
-    $('html,body').animate({scrollTop: aTag.offset().top - 80}, 'slow');
-<?php endif; ?>
-  // init bootpag
-  var results_per_page = 4;
-  $('.resultados_videos').hide();
-
-  $('.page-selection').bootpag({
-    total: 8
-  }).on("page", function (event, num) {
-    $('.resultados_videos').hide();
-    $('.resultados_videos').each(function () {
-      if ($(this).index() < num * results_per_page && $(this).index() >= (num - 1) * results_per_page) {
-        $(this).show();
-      }
-    });
-
-  });
-  $('.resultados_videos').slice(0, results_per_page).show();
-</script>
+<script src="<?php echo BASE_URL?>/js/jquery-validator/jquery.validate.min.js" type="text/javascript"></script>
+<script src="<?php echo BASE_URL?>/js/jquery-validator/localization/messages_es.min.js" type="text/javascript"></script>
+<script type="text/javascript"  src="<?php echo BASE_URL?>/js/custom.js" ></script>
+<script type="text/javascript" src="<?php echo BASE_URL?>/js/query.bootpag.min.js"></script>
 </body>
 </html>
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
-<link href="vendor/jquery-floating-social-share-master/dist/jquery.floating-social-share.min.css" rel="stylesheet" type="text/css"/>
-<link href="css/custom.css" rel="stylesheet"/>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link href="<?php echo BASE_URL?>/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+<link rel="stylesheet" href="<?php echo BASE_URL?>/css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+<link href="<?php echo BASE_URL?>/vendor/jquery-floating-social-share-master/dist/jquery.floating-social-share.min.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo BASE_URL?>/css/custom.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="<?php echo BASE_URL?>/favicon.ico" type="image/x-icon">
+<link rel="icon" href="<?php echo BASE_URL?>/favicon.ico" type="image/x-icon">

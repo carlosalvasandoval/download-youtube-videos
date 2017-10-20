@@ -12,5 +12,9 @@ switch (getenv('APPLICATION_ENV'))
     define('BASE_URL', 'http://localhost/descargarvideoyoutube');
     break;
 }
-echo "<script type='text/javascript'> var base_url ='" . BASE_URL . "'</script>";
+define('APPPATH', realpath(__DIR__ . '/..'));
+
+echo "<script type='text/javascript'> "
+ . "var base_url ='" . BASE_URL . "'"
+ . "</script>";
 
