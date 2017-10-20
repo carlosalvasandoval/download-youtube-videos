@@ -20,8 +20,8 @@ $("body").floatingSocialShare({
   ],
   twitter_counter: true,
   text: "Compartir con: ",
-  url: "http://descargarvideoyoutube.com",
-  title: "Hola! te comparto esta herramienta para descargar videos de youtube GRATIS!! "
+  url: $(location).attr('href'),
+  title: $('title').text()
 });
 var validator = $("#feedbackform").validate({
   rules: {
