@@ -6,7 +6,7 @@
     <meta name="description" content="<?php echo $description ?>"/>
     <meta http-equiv="Cache-control" content="public">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <meta property="og:url"                content="http://descargarvideoyoutube.com" />
+    <meta property="og:url"                content="https://descargarvideoyoutube.com" />
     <meta property="og:type"               content="website" />
     <meta property="og:title"              content="DescargarVideoYotube.com | <?php echo $title ?>" />
     <meta property="og:description"        content="<?php echo $description ?>" />
