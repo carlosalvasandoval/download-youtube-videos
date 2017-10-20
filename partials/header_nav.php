@@ -48,12 +48,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://descargarvideoyoutube.com/">DescargarVideoYoutube.com</a>
+          <a class="navbar-brand" href="<?php echo BASE_URL;?>/">DescargarVideoYoutube.com</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li>
-              <a href="http://descargarvideoyoutube.com/articulos/como-puedo-descargar-videos-de-youtube">
+              <a href="<?php echo BASE_URL;?>/articulos/como-puedo-descargar-videos-de-youtube">
                 <i class="glyphicon glyphicon-info-sign"></i> ¿Cómo descargar?</a></li>
             <li><a data-toggle="modal" data-target="#modalTutorial"><i class="glyphicon glyphicon-facetime-video"></i> Tutorial</a></li>
             <li><a data-toggle="modal" data-target="#modalFeedback"><i class="glyphicon glyphicon-envelope"></i> Feedback</a></li>
@@ -66,7 +66,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top visible-xs-block" id="sidebar-wrapper" role="navigation">
       <ul class="nav sidebar-nav">
         <li></li>
-        <li><a href="http://descargarvideoyoutube.com/articulos/como-puedo-descargar-videos-de-youtube">
+        <li><a href="<?php echo BASE_URL;?>/articulos/como-puedo-descargar-videos-de-youtube">
             <i class="glyphicon glyphicon-info-sign"></i> ¿Cómo descargar?</a></li>
         <li><a data-toggle="modal" data-target="#modalTutorial"><i class="glyphicon glyphicon-facetime-video"></i> Tutorial</a></li>
         <li><a data-toggle="modal" data-target="#modalFeedback"><i class="glyphicon glyphicon-envelope"></i> Feedback</a></li>
@@ -75,7 +75,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Articulos <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li class="dropdown-header">Regueton</li>
-            <li><a href="https://descargarvideoyoutube.com/regueton/arcangel">Arcagel</a></li>
+            <li><a href="<?php echo BASE_URL;?>/regueton/arcangel">Arcagel</a></li>
           </ul>
         </li>
       </ul>
@@ -84,7 +84,7 @@
     <div id="page-content-wrapper">
       <div style="background: #222; height: 60px; position: fixed; top: 0; width: 100%; padding-left: 20px; padding-top: 20px; z-index: 1" 
            class="text-center visible-xs-block">
-        <a style="color: white"  href="http://descargarvideoyoutube.com/" class="h5">DescargarVideoYoutube.com</a>
+        <a style="color: white"  href="<?php echo BASE_URL;?>/" class="h5">DescargarVideoYoutube.com</a>
       </div>
       <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
         <span class="hamb-top"></span>

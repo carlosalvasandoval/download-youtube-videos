@@ -13,5 +13,7 @@
     <meta property="og:image"              content="http://www.descargarvideoyoutube.com/img/descargarvideoyoutube_facebook_img.png" />
     <meta property="fb:app_id"             content="270535033464194" />
 
-    <?php include 'partials/header_nav.php'; ?>
+    <?php 
+    require 'config/constants.php';
+    include 'partials/header_nav.php'; ?>
 

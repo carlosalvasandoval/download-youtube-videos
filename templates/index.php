@@ -59,6 +59,11 @@
             {
               $videos_html[$searchResult['id']['videoId']] = '<div class="col-xs-12 col-sm-6 resultados_videos">
     <div class="thumbnail"><iframe width="100%" height="200" frameborder = "0"
+    allowfullscreen="allowfullscreen"
+        mozallowfullscreen="mozallowfullscreen" 
+        msallowfullscreen="msallowfullscreen" 
+        oallowfullscreen="oallowfullscreen" 
+        webkitallowfullscreen="webkitallowfullscreen"
 src="https://www.youtube.com/embed/' . $searchResult['id']['videoId'] . '">
 </iframe>
       <div class="caption">

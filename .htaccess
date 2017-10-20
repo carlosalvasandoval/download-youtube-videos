@@ -5,7 +5,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 #RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 #RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-
+SetEnv APPLICATION_ENV localhost
 <IfModule mod_expires.c>
 
     ExpiresActive on

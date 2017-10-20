@@ -39,7 +39,7 @@ $('#btn-enviar-feedback').on('click', function () {
     $.ajax({
       type: 'POST',
       dataType: 'json',
-      url: "send_feedback.php",
+      url: base_url+"/send_feedback.php",
       data: $('#feedbackform').serializeArray(),
       success: function (data) {
         if (data.status == 1)
@@ -99,37 +99,50 @@ $(function () {
   });
 });
 
+//videos
+$(document).on('click', '.descargar_youtube_btn', function () {
+  console.log('generando formatos');
+  var video_id = $(this).attr('video_id');
+  $('.descargar_youtube_btn').addClass('disabled');
+  $('.descargar_youtube_btn').attr('disabled', 'disabled');
+  $(this).button('loading');
+  $(this).before('<div class="progress">' +
+    '<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">' +
+    'Generando formatos . . .<span class="sr-only">45% Complete</span>' +
+    ' </div>' +
+    '</div>');
+  window.location.href = base_url+"/getvideo.php?videoid=https://www.youtube.com/watch?v=" + video_id + '&type=Descargar';
+});
 
 
-
-
+//side bar
 $(document).ready(function () {
   var trigger = $('.hamburger'),
-      overlay = $('.overlay'),
-     isClosed = false;
+    overlay = $('.overlay'),
+    isClosed = false;
 
-    trigger.click(function () {
-      hamburger_cross();      
-    });
+  trigger.click(function () {
+    hamburger_cross();
+  });
 
-    function hamburger_cross() {
+  function hamburger_cross() {
 
-      if (isClosed == true) {          
-        overlay.hide();
-        trigger.removeClass('is-open');
-        trigger.addClass('is-closed');
-        isClosed = false;
-        $('.modal').css('width', '+=0');
-      } else {   
-        overlay.show();
-        trigger.removeClass('is-closed');
-        trigger.addClass('is-open');
-        isClosed = true;
-        $('.modal').css('width', '+=0');
-      }
+    if (isClosed == true) {
+      overlay.hide();
+      trigger.removeClass('is-open');
+      trigger.addClass('is-closed');
+      isClosed = false;
+      $('.modal').css('width', '+=0');
+    } else {
+      overlay.show();
+      trigger.removeClass('is-closed');
+      trigger.addClass('is-open');
+      isClosed = true;
+      $('.modal').css('width', '+=0');
+    }
   }
-  
+
   $('[data-toggle="offcanvas"]').click(function () {
-        $('#wrapper').toggleClass('toggled');
-  });  
+    $('#wrapper').toggleClass('toggled');
+  });
 });

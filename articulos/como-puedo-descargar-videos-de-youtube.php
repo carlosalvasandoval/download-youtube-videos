@@ -2,6 +2,7 @@
 $title = '¿Cómo puedo descargar videos de youtube gratuitamente? | descargarvideoyoutube.com';
 $description = 'Permite de manera gratuita covertir los videos alojados en youtube a formatos que puedan ser facilmente leidos por nuestro ordenador';
 $img = 'https://descargarvideoyoutube.com/regueton/img/descargarvideoyoutube_como_descargar.jpg';
+require '../config/constants.php';
 require 'header.php';
 ?>
 <div class="panel panel-default">
