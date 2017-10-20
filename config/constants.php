@@ -9,7 +9,7 @@ switch (APPLICATION_ENV)
     define('BASE_URL', 'http://localhost/descargarvideoyoutube');
     break;
   default:
-    define('BASE_URL', 'http://localhost/descargarvideoyoutube');
+    define('BASE_URL', 'https://descargarvideoyoutube.com');
     break;
 }
 echo "<script type='text/javascript'> var base_url ='" . BASE_URL . "'</script>";
